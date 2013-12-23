@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #define KILOS_PER_POUND .45359
 
 void print_converted(int pounds)
@@ -13,12 +14,20 @@ void print_converted(int pounds)
 		pounds, stones, uklbs,  kilos); 
 }
 
-int main()
+int main(int argc,char *argv[])
 {
 	int us_pounds;
 
-	printf("Weight in Pounds: ");
-	scanf("%d", &us_pounds);	
+	if(argc != 2)
+	{
+		printf("Usage: convert weight_in_pounds\n");
+		exit(1);
+	}
+	
+	sscanf(argv[1], "%d", &us_pounds); /* Convert String to int */
+
+	/*printf("Weight in Pounds: ");
+	scanf("%d", &us_pounds);	*/
 
 	printf("US lbs	Stone  lbs	Kilo\n");
 	print_converted(us_pounds);
