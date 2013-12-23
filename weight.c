@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #define KILOS_PER_POUND .45359
 
-void print_converted(int pounds)
 /* Convert US Weight to Imperial and International Units. Print the results */
+void print_converted(int pounds)
 {
 	int stones = pounds /14;
 	int uklbs = pounds % 14;
