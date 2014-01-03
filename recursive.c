@@ -16,8 +16,6 @@ int fib(int num)
 		return(fib(num - 1) + fib(num - 2));
 		break;
 	}
-	
-	// printf("%2d\n", num);
 }
 
 int main(int argc, char *argv[])
@@ -32,8 +30,6 @@ int main(int argc, char *argv[])
 
 	sscanf(argv[1], "%d", &number);
 
-	// fib(number);
-
-	// printf("Success!\n");
-	printf("%2d\n", fib(number));
+	printf("Success!\n");
+	printf("%3d\n", fib(number));
 }
