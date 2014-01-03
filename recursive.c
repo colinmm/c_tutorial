@@ -1,22 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[])
-{
-	int number;
-
-	if(argc != 2)
-	{
-		printf("Usage: Return fibonacci value of a number\n");
-		exit(0);
-	}
-
-	sscanf(argv[1], "%d", &number);
-
-	fib(number);
-	printf("Success!\n");
-}
-
 /* Fibonacci value of a number */
 int fib(int num)
 {
@@ -33,5 +17,23 @@ int fib(int num)
 		break;
 	}
 	
-	printf(num);
+	// printf("%2d\n", num);
+}
+
+int main(int argc, char *argv[])
+{
+	int number;
+
+	if(argc != 2)
+	{
+		printf("Usage: Return fibonacci value of a number\n");
+		exit(0);
+	}
+
+	sscanf(argv[1], "%d", &number);
+
+	// fib(number);
+
+	// printf("Success!\n");
+	printf("%2d\n", fib(number));
 }
