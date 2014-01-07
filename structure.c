@@ -10,8 +10,7 @@ int main()
 {
 	person me;
 
-	strcpy(me.name, "colinmm");
-	// me.name[1] = "colinmm";
+	strcpy(me.name, "Colin");
 	me.age = 28;
 
 	printf("Name: %s\n", me.name);
